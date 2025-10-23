@@ -11,7 +11,7 @@ mkdir "$BUILD_DIR"
 
 # UPDATE ME! x86_64 release
 # Release Page: https://downloads.openwrt.org/releases/
-SDK_URL="https://${SERVER}.openwrt.org/releases/${VERSION}/targets/${ARCH}/${PLATFORM}/openwrt-sdk-${VERSION}-${ARCH}-${PLATFORM}_${COMPILER}.Linux-x86_64.tar.xz"
+SDK_URL="https://${SERVER}.openwrt.org/releases/${VERSION}/targets/${ARCH}/${PLATFORM}/openwrt-sdk-${VERSION}-${ARCH}-${PLATFORM}_${COMPILER}.Linux-x86_64.tar.zst"
 SDK_SUM=df9cbce6054e6bd46fcf28e2ddd53c728ceef6cb27d1d7fc54a228f272c945b0
 SDK_FILE=$(basename $SDK_URL)
 
@@ -34,7 +34,7 @@ setup() {
     tar xf $SDK_FILE
     
     echo "Updating and Installing openwrt feeds"
-    cd $(basename $SDK_FILE .tar.xz)
+    cd $(basename $SDK_FILE .tar.zst)
     
     cp feeds.conf.default feeds.conf
     echo "src-link pyther /src" >> feeds.conf
@@ -54,9 +54,9 @@ fi
 cd $BUILD_DIR
 
 # Check if Directory exists
-if [ -d $(basename $SDK_FILE .tar.xz) ]; then
-   echo "WARNING: $(basename $SDK_FILE .tar.xz) exists! Skipping setup!"
-   cd $(basename $SDK_FILE .tar.xz) || exit 1
+if [ -d $(basename $SDK_FILE .tar.zst) ]; then
+   echo "WARNING: $(basename $SDK_FILE .tar.zst) exists! Skipping setup!"
+   cd $(basename $SDK_FILE .tar.zst) || exit 1
 else
    setup
 fi

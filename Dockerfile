@@ -19,7 +19,7 @@ FROM alpine:latest
 RUN apk update && \
     apk add tar findutils diffutils grep gzip unzip wget coreutils argp-standalone musl-fts-dev musl-obstack-dev musl-libintl && \
     apk add build-base && \
-    apk add bash bzip2 xz gawk git && \
+    apk add bash bzip2 xz zstd gawk git && \
     apk add perl rsync && \
     apk add ncurses-dev && \
     apk add python3
