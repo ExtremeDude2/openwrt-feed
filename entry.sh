@@ -12,7 +12,7 @@ mkdir "$BUILD_DIR"
 # UPDATE ME! x86_64 release
 # Release Page: https://downloads.openwrt.org/releases/
 SDK_URL="https://${SERVER}.openwrt.org/releases/${VERSION}/targets/${ARCH}/${PLATFORM}/openwrt-sdk-${VERSION}-${ARCH}-${PLATFORM}_${COMPILER}.Linux-x86_64.tar.zst"
-SDK_SUM=df9cbce6054e6bd46fcf28e2ddd53c728ceef6cb27d1d7fc54a228f272c945b0
+SDK_SUM=229e871f734a2cee5ce3ad6a3e98d3836b0899bfdeaea4d9c2c5cc7b1fce1407
 SDK_FILE=$(basename $SDK_URL)
 
 download() {
