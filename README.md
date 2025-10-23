@@ -18,7 +18,7 @@ Most people will want this method, for simplicity. Just install `buildah` and
 DockerFile should make the build process simple and remove any enivorment
 specific build issues.
 
-1. Clone: `git clone https://github.com/pyther/openwrt-feed.git`
+1. Clone: `git clone https://github.com/EvanCarroll/openwrt-feed.git`
 2. Change Dir: `cd openwrt-feed`
 3. Update `SDK_URL`, and `SDK_SUM` in `entry.sh`, you can get these paths by going to the
 	* [OpenWRT Release page](https://downloads.openwrt.org/releases), select the
