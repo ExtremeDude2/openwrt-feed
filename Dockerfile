@@ -17,7 +17,7 @@ FROM alpine:latest
 # Build dependency: Missing libintl.h Please install the musl-libintl package if musl libc
 
 RUN apk update && \
-    apk add tar findutils diffutils grep gzip unzip wget coreutils argp-standalone musl-fts-dev musl-obstack-dev musl-libintl && \
+    apk add tar findutils diffutils grep gzip unzip wget coreutils argp-standalone musl-fts-dev musl-obstack-dev musl-libintl swig && \
     apk add build-base && \
     apk add bash bzip2 xz zstd gawk git && \
     apk add perl rsync && \
