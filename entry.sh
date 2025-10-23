@@ -3,10 +3,10 @@
 # Can also be set to archive
 SERVER="downloads"
 BUILD_DIR='build'
-VERSION="23.05.2"
+VERSION="24.10.4"
 ARCH="x86"
 PLATFORM="64"
-COMPILER="gcc-12.3.0_musl"
+COMPILER="gcc-13.3.0_musl"
 mkdir "$BUILD_DIR"
 
 # UPDATE ME! x86_64 release
